@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Order</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <main>
+        <h2>Conplete your order</h2>
+        <form action="tahanks.html">
+            <label for="name">
+                <span>Full Name:</span>
+                <input type="name" name="FullName" id="name" required>
+            </label>
+
+            <label>
+                <span>E-mail: </span>
+                <input type="email" required placeholder="example@walla.com">
+            </label>
+
+            <label for="">
+                <span>Adress:</span>
+                <input type="text" name="adress" required>
+            </label>
+
+            <label>
+                <span>Type:</span>
+                <select id="Type">
+                    <option value="" disabled selected>--Choose--</option>
+                    <option value="17-Pro">17-Pro</option>
+                    <option value="17">17</option>
+                    <option value="17-Air">17-Air</option>
+                    <option value="17-e">17-e</option>
+                </select>
+            </label>
+
+            <label>
+                <span>Amount:</span>
+                <input type="number" min="1" max="10">
+            </label>
+
+            <label for="">
+                <span>Aprrove your order ---></span>
+                <input type="radio" required>
+            </label>
+
+            <label for="">
+                <span>Do you agree to T.O.U?</span>
+                <input type="radio" required>
+            </label>
+
+            <br>
+
+            <label for="">
+                <span>Card number:</span>
+                <input type="text" name="CardNum" id="card" required>
+            </label>
+
+            <label for="">
+                <span>Expartion date:</span>
+                <input type="date" name="endCard" id="dateC" required>
+            </label>
+
+            <label for="">
+                <span>CVV:</span>
+                <input type="text" name="CVV" id="CVV">
+
+            </label>
+            <div class="BTN">
+                <button type="submit"> Send </button>
+                <button type="reset"> Clear</button>
+            </div>
+        </form>
+
+    </main>
+</body>
+<br><br>
+<footer>
+    <a href="index.html">Return to info page</a>
+</footer>
+
+</html>
