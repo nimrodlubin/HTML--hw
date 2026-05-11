@@ -1,34 +1,64 @@
-*{
-   box-sizing: border-box;
-   text-align: center;
-   font-size: 15px;
+form {
    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   font-size: 0.9rem;
+   text-align: left;
+   background: #f0f0f2;       
+   display: grid;
+   grid-template-columns: 1fr; 
+   gap: 20px;
+   padding: 40px;
+   border-radius: 20px;
+   box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+   max-width: 600px;
+   margin: auto;
 }
-header{
-   position: sticky;
-   top: 0;
-   box-shadow: 0 2px 10px;
-}
-h1 {
-font-size: 3rem;
-}
-table {
- margin: auto;
- padding: auto;
- border: 0.6rem solid gray;
- text-align: center;
- box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 
-   tr,td {
-   border: 0.2rem solid whitesmoke;
-   }
-
-   th{
-      font-size: 1.5rem;
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-   }
+form label {
+   display: flex;
+   flex-direction: column; 
+   align-items: flex-start;
+   gap: 5px;
 }
 span {
-   position: relative;
-   margin-top: 20px;
+   background: rgba(255, 255, 255, 0.4);
+   padding: 2px 8px;
+   border-radius: 4px;
+   font-weight: 600;
+   color: #444;
+}
+input:not([type="radio"]), select {
+   width: 100%;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 8px;
+   font-size: 1rem;
+}
+
+input[type="radio"] {
+    width: auto;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.BTN {      
+   display: grid;
+   grid-template-columns: 1fr; 
+   gap: 10px;
+   margin-top: 1rem;
+}
+
+button {
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #0071e3; 
+    color: white;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+button:hover { 
+   background-color: #005bb5;
+   transform: scale(1.02); 
 }
