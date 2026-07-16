@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <script src="../scripts/main.js" type="module"></script>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body>
+    <main>
+        <h2>הרשמה למערכת</h2>
+        <form id="registerForm">
+            <label for="regUsername">שם משתמש(עד 60 תווים):</label>
+            <input type="text" id="regUsername" maxlength="60" required>
+
+            <label for="regPassword">סיסמה(7-12 תווים):</label>
+            <input type="password" id="regPassword" minlength="7" maxlength="12" required>
+
+            <label for="registerPassCon">אימות סיסמה:</label>
+            <input type="password" id="registerPassCon" minlength="7" maxlength="12" required>
+
+            <label for="regAvatar">תמונה (jpg/jpeg בלבד):</label>
+            <input type="file" id="regAvatar" accept=".jpg, .jpeg" required>
+
+            <label for="regFirstName">שם פרטי:</label>
+            <input type="text" id="regFirstName" required>
+
+            <label for="regLastName">שם משפחה:</label>
+            <input type="text" id="regLastName" required>
+
+            <label for="regEmail">כתובת אימייל:</label>
+            <input type="email" id="regEmail" required>
+
+            <label for="regBirthday">תאריך לידה:</label>
+            <input type="date" id="regBirthday" required>
+
+            <label for="regCity">עיר:</label>
+            <input type="text" id="regCity" list="citiesList" required>
+            <datalist id="citiesList"> </datalist>
+
+            <label for="regStreet">רחוב:</label>
+            <input type="text" id="regStreet" required>
+
+            <label for="regHnum">מספר בית:</label>
+            <input type="number" id="regHnum" min="0" required>
+
+            <button type="submit" id="registerBTN">שמור</button>
+        </form>
+
+        <p>כבר רשום?
+            <a href="index.html">לחץ כאן להתחברות</a>
+        </p>
+    </main>
+
+</body>
+
+</html>

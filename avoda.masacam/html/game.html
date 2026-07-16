@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battleship</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/game.css">
+</head>
+
+<body>
+    <main class="gamePage">
+        <h1>משחק Battleship</h1>
+
+        <section id="settingsBox" class="settingsBox">
+            <h3>בחר נתוני משחק</h3>
+            <label for="boardSize">גודל לוח:</label>
+            <select id="boardSize">
+                <option value="">בחר</option>
+                <option value="10">10 X 10</option>
+                <option value="11">11 X 11</option>
+                <option value="12">12 X 12</option>
+                <option value="13">13 X 13</option>
+                <option value="14">14 X 14</option>
+                <option value="15">15 X 15</option>
+            </select>
+
+            <label>כמות ספינות בגודל 2:</label>
+            <input type="number" id="ship2" min="0" value="1">
+            <label>כמות ספינות בגודל 3:</label>
+            <input type="number" id="ship3" min="0" value="1">
+            <label>כמות ספינות בגודל 4:</label>
+            <input type="number" id="ship4" min="0" value="1">
+            <label>כמות ספינות בגודל 5:</label>
+            <input type="number" id="ship5" min="0" value="1">
+
+            <button id="startGameBtn">התחל משחק</button>
+            <button onclick="location.href='profile.html'">חזרה לפרופיל</button>
+        </section>
+
+        <section id="gameArea" class="gameArea hidden">
+            <div id="board" class="board"></div>
+
+            <div class="sideBox">
+                <h3>מספר ספינות שנשארו</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>גודל ספינה</th>
+                            <th>כמות</th>
+                        </tr>
+                    </thead>
+                    <tbody id="shipsTable"></tbody>
+                </table>
+                <button id="newGameBtn">משחק חדש</button>
+            </div>
+        </section>
+
+        <div id="boom" class="boom hidden">BOOM!</div>
+    </main>
+
+    <script src="../scripts/game.js"></script>
+</body>
+
+</html>

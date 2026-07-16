@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <script src="../scripts/main.js" type="module"></script>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body>
+    <main>
+        <h1>התחברות למערכת</h1>
+        <form id="LoginForm">
+            <label for="LogUserName">שם משתמש:</label>
+            <input type="text" id="LogUserName" name="username" placeholder="Enter your username" maxlength="60"
+                required>
+
+            <label for="loginPassword">סיסמה</label>
+            <input type="password" id="loginPassword" placeholder="Enter your Password" minlength="6" maxlength="14"
+                required>
+
+            <button type="submit" id="loginBTN">כניסה</button>
+        </form>
+
+        <p>לא רשום? </p>
+        <a href="register.html">לעמוד ההרשמה לחץ כאן</a>
+
+    </main>
+
+</body>
+
+</html>

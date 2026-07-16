@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+
+    <script src="../scripts/main.js" type="module"></script>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body>
+    <header class="ProfileHeader">
+        <h1>שלום, <span id="profileGreetingName"></span></h1>
+    </header>
+
+    <main class="ProfilePage">
+        <img id="profilePic" src="" alt="תמונת פרופיל">
+        <h2 id="profileFullName"></h2>
+
+        <div class="profile-details">
+            <p><strong>שם משתמש:</strong> <span id="profileUsername"></span></p>
+            <p><strong>דואר אלקטרוני:</strong> <span id="profileEmail"></span></p>
+            <p><strong>כתובת:</strong> <span id="profileAddress"></span></p>
+            <p><strong>תאריך לידה:</strong> <span id="profileBirthday"></span></p>
+        </div>
+
+        <nav class="ProfileActions">
+            <button id="editProfileBTN">עדכון פרטים</button>
+            <button id="gameBTN">למשחק</button>
+            <button id="logoutBTN">התנתק</button>
+        </nav>
+
+        <section id="editProfileSection" hidden>
+            <h3>עריכת פרטי משתמש</h3>
+            <form id="editProfileForm">
+                <label for="editUsername">שם משתמש (עד 60 תווים):</label>
+                <input type="text" id="editUsername" maxlength="60" required>
+
+                <label for="editPassword">סיסמה (7-12 תווים):</label>
+                <input type="password" id="editPassword" minlength="7" maxlength="12" required>
+
+                <label for="editPassCon">אימות סיסמה:</label>
+                <input type="password" id="editPassCon" minlength="7" maxlength="12" required>
+
+                <label for="editAvatar">תמונה (jpg/jpeg בלבד):</label>
+                <input type="file" id="editAvatar" accept=".jpg,.jpeg">
+
+                <label for="editFirstName">שם פרטי:</label>
+                <input type="text" id="editFirstName" required>
+
+                <label for="editLastName">שם משפחה:</label>
+                <input type="text" id="editLastName" required>
+
+                <label for="editEmail">כתובת אימייל:</label>
+                <input type="email" id="editEmail" required>
+
+                <label for="editBirthday">תאריך לידה:</label>
+                <input type="date" id="editBirthday" required>
+
+                <label for="editCity">עיר:</label>
+                <input type="text" id="editCity" list="editCitiesList" autocomplete="off" required>
+                <datalist id="editCitiesList"></datalist>
+
+                <label for="editStreet">רחוב:</label>
+                <input type="text" id="editStreet" required>
+
+                <label for="editHnum">מספר בית:</label>
+                <input type="number" id="editHnum" min="0" required>
+
+                <button type="submit" id="saveEditBTN">שמור שינויים</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

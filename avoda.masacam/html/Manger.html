@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manger</title>
+
+  <script src="../scripts/main.js" type="module"></script>
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body>
+  <main id="AdminPage">
+    <h1>ניהול משתמשים</h1>
+    <table id="usersTable">
+      <thead>
+        <tr>
+          <th>תמונה</th>
+          <th>שם משתמש</th>
+          <th>שם מלא</th>
+          <th>תאריך לידה</th>
+          <th>כתובת</th>
+          <th>דואר אלקטרוני</th>
+          <th>פעולות (עריכה / מחיקה)</th>
+        </tr>
+      </thead>
+      <tbody id="usersTableInfo">
+        <!-- שורות המשתמשים יוזרקו לכאן דינמית מה-JS -->
+      </tbody>
+    </table>
+
+    <section id="adminEditSection" hidden>
+      <h3>עריכת פרטי משתמש</h3>
+      <form id="adminEditForm">
+        <label for="adminEditUsername">שם משתמש (עד 60 תווים):</label>
+        <input type="text" id="adminEditUsername" maxlength="60" required>
+
+        <label for="adminEditPassword">סיסמה (7-12 תווים):</label>
+        <input type="password" id="adminEditPassword" minlength="7" maxlength="14" required>
+
+        <label for="adminEditPassCon">אימות סיסמה:</label>
+        <input type="password" id="adminEditPassCon" minlength="7" maxlength="14" required>
+
+        <label for="adminEditAvatar">תמונה (jpg/jpeg בלבד):</label>
+        <input type="file" id="adminEditAvatar" accept=".jpg,.jpeg">
+
+        <label for="adminEditFirstName">שם פרטי:</label>
+        <input type="text" id="adminEditFirstName" required>
+
+        <label for="adminEditLastName">שם משפחה:</label>
+        <input type="text" id="adminEditLastName" required>
+
+        <label for="adminEditEmail">כתובת אימייל:</label>
+        <input type="email" id="adminEditEmail" required>
+
+        <label for="adminEditBirthday">תאריך לידה:</label>
+        <input type="date" id="adminEditBirthday" required>
+
+        <label for="adminEditCity">עיר:</label>
+        <input type="text" id="adminEditCity" list="adminEditCitiesList" autocomplete="off" required>
+        <datalist id="adminEditCitiesList"></datalist>
+
+        <label for="adminEditStreet">רחוב:</label>
+        <input type="text" id="adminEditStreet" required>
+
+        <label for="adminEditHnum">מספר בית:</label>
+        <input type="number" id="adminEditHnum" min="0" required>
+
+        <button type="submit" id="adminSaveEditBTN">שמור שינויים</button>
+        <button type="button" id="adminCancelEditBTN">ביטול</button>
+      </form>
+    </section>
+  </main>
+</body>
+
+</html>
